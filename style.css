@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
+}
+
+.dropdown {
+    width: 300px;
+    height: 60px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    z-index: 10000;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #333;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.dropdown.active::after {
+    top: 28px;
+    transform: rotate(-225deg);
+}
+
+.dropdown input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 12px 20px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 0;
+    outline: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.dropdown .option {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: opacity 0.5s ease;
+}
+
+.dropdown.active .option {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown .option div {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.dropdown .option div:hover {
+    color: #fff;
+    background-color: #62baea;
+}
+
+.dropdown .option div ion-icon {
+    position: relative;
+    top: 4px;
+    font-size: 1.2em;
+}
+
+.selected-item {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: -40px;
+}

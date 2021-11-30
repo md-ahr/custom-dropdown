@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Custom Dropdown List</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="js--dropdown" class="dropdown">
+            <input type="text" id="js--text-input" placeholder="Dropdown Menu" readonly />
+            <div class="option">
+                <div class="js--show-item"><ion-icon name="logo-html5"></ion-icon> Html</div>
+                <div class="js--show-item"><ion-icon name="logo-css3"></ion-icon> Css</div>
+                <div class="js--show-item"><ion-icon name="logo-nodejs"></ion-icon> JavaScript</div>
+                <div class="js--show-item"><ion-icon name="logo-react"></ion-icon> React JS</div>
+                <div class="js--show-item"><ion-icon name="logo-buffer"></ion-icon> MongoDB</div>
+            </div>
+            <p id="js--selected-item" class="selected-item"></p>
+        </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="./app.js" async defer></script>
+    </body>
+</html>
